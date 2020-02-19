@@ -21,25 +21,12 @@ function App() {
 
   const [isError, setIsError] = useState(false);
 
-  // const [cpm, setCpm] = useState(0);
-  // const calculateCpm = (elapsedTime, userInput) => {
-  //   let interval;
-  //   interval = setInterval(
-  //     () => setCpm((elapsedTime / userInput.length) => (elapsedTime +0.1/ userInput.length)),100
-  //   )
-  // };
-  // const calculateWpm = calculateCpm / 5;
-
   // timer
   const { isTimerActive, elapsedTime, startTimer, stopTimer } = useTimer();
   const toggleTimer = () => {
     isTimerActive ? stopTimer() : startTimer();
   };
 
-  // let rawCpm = 0;
-  // if (elapsedTime > 0) {
-  //   rawCpm = (userInput.length * 60) / elapsedTime;
-  // }
   let netCpm = 0;
   netCpm = ((userInput.length - incorrectCharCount) * 60) / elapsedTime;
   let netWpm = 0;

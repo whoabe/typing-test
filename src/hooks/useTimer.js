@@ -10,7 +10,6 @@ const useTimer = () => {
       interval = setInterval(
         () => setElapsedTime(prevElapsedTime => prevElapsedTime + 0.1),
         100
-        // also update the cpm in here?
       );
     }
     return () => clearInterval(interval);
